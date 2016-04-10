@@ -14,4 +14,11 @@ public class MicroserviceController {
     	map.put("value", true);
         return map;
     }
+
+    @RequestMapping("/health")
+    public Map<String, Boolean> checkHealth() {
+    	HashMap<String, Boolean> map = new HashMap<>();
+    	map.put("healthy", true);
+        return map;
+    }
 }

@@ -1,8 +1,12 @@
 spring:
   cloud:
     consul:
+      host: localhost
+      port: 8500
       config:
-        enabled: false
+        enabled: true
         prefix: configuration
         defaultContext: apps
         profileSeparator: '::'
+      discovery:
+        instanceId: my-microservice
